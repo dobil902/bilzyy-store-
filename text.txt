@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The King Off Bilzyy</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&display=swap');
+    :root {
+      --bg-color: rgba(0,0,0,0.85);
+      --text-color: #ffffff;
+      --header-bg: rgba(0,0,0,0.6);
+      --highlight: #ffffff;
+      --border-color: #444;
+    }
+    body.light-mode {
+      --bg-color: rgba(255,255,255,0.9);
+      --text-color: #111;
+      --header-bg: rgba(255,255,255,0.8);
+      --highlight: #000000;
+      --border-color: #ccc;
+    }
+    body {
+      font-family: 'Barlow Condensed', sans-serif;
+      margin: 0;
+      background: var(--bg-color) url('game-themed-background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text-color);
+      transition: all 0.3s ease;
+      overflow-x: hidden;
+      text-transform: uppercase;
+    }
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: var(--bg-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    #loader.hidden {
+      display: none;
+    }
+    .spinner {
+      border: 6px solid var(--border-color);
+      border-top: 6px solid var(--highlight);
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    header {
+      background: var(--header-bg);
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 2px solid var(--border-color);
+    }
+    header img {
+      width: 120px;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--highlight);
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    .toggle-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--highlight);
+      color: #000;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      z-index: 10000;
+    }
+    .welcome {
+      background: rgba(255, 255, 255, 0.1);
+      margin: 1rem auto;
+      max-width: 700px;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 12px;
+      animation: fadeIn 2s ease;
+    }
+    .welcome h2 {
+      color: var(--highlight);
+      font-size: 2rem;
+    }
+    .welcome p {
+      color: var(--text-color);
+      font-size: 1.1rem;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .content {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+    }
+    .cta a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 1rem 1.5rem;
+      background: var(--highlight);
+      color: #000;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .cta a:hover {
+      background: #e0e0e0;
+      transform: scale(1.05);
+    }
+    .contact a {
+      color: var(--highlight);
+    }
+    .order-form {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .order-form a {
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      background: var(--highlight);
+      color: #000;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .order-form a:hover {
+      background: #e0e0e0;
+    }
+    .testimonials {
+      margin-top: 3rem;
+      background: #000;
+      padding: 2rem;
+      border-radius: 12px;
+      border: 2px solid #fff;
+    }
+    .testimonials h2 {
+      color: #fff;
+    }
+    .testimonial {
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #fff;
+      padding-left: 1rem;
+      color: #fff;
+    }
+    .characters {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+    }
+    .characters img {
+      width: 150px;
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+    .characters img:hover {
+      transform: scale(1.1) rotate(2deg);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #111;
+      color: #888;
+      margin-top: 2rem;
+    }
+  </style>
+  <script>
+    window.addEventListener('load', function() {
+      document.getElementById('loader').classList.add('hidden');
+    });
+    function toggleMode() {
+      document.body.classList.toggle('light-mode');
+    }
+  </script>
+</head>
+<body>
+  <div id="loader">
+    <div class="spinner"></div>
+  </div><button class="toggle-btn" onclick="toggleMode()">🌓 Mode</button>
+
+  <header>
+    <img src="/mnt/data/file-C1poKuWT9Kw593oDNbVeK2" alt="Billzyy Logo">
+    <h1>The King Off Bilzyy</h1>
+    <p>Admin Rekber - Stok Akun Game</p>
+  </header>  <div class="welcome">
+    <h2>👑 Selamat Datang di The King Off Bilzyy 👑</h2>
+    <p>Toko resmi layanan jual beli akun game & jasa rekber terpercaya! Kami hadir untuk memudahkan kamu dalam transaksi akun game Free Fire, Mobile Legends, dan lainnya. Aman, cepat, dan profesional adalah komitmen kami. Yuk gabung bersama komunitas BILZYY!</p>
+  </div>  <div class="content">
+    <p>This is Billzyy Official Store providing account buying or selling services and admin services rekber and jasa post.</p><div class="cta">
+  <a href="https://chat.whatsapp.com/E6fDgJJSLgLDTNe2UWlNze" target="_blank">Grup Jual Beli Akun Game Billzyy #1</a>
+  <a href="https://chat.whatsapp.com/EpPMH4MrT7PBGP4poCPVtl" target="_blank">Grup Jual Beli Akun Game Billzyy #2</a>
+  <a href="https://whatsapp.com/channel/0029Vb0fCqO5PO0rNuWMPl0h" target="_blank">Saluran Info Stok Akun Game</a>
+</div>
+
+<div class="contact">
+  <p><strong>Instagram:</strong> <a href="https://instagram.com/billzyystore" target="_blank">@billzyystore</a></p>
+  <p><strong>WhatsApp:</strong> <a href="https://wa.me/6282120425727" target="_blank">0821-2042-5727</a></p>
+</div>
+
+<div class="order-form">
+  <h2>Form Order Otomatis</h2>
+  <a href="https://wa.me/6282120425727?text=Halo%20saya%20mau%20order%20akun%20game%20atau%20pakai%20jasa%20rekber%20admin%20Billzyy" target="_blank">Hubungi Sekarang</a>
+</div>
+
+<div class="testimonials">
+  <h2>Testimoni Buyer & Seller</h2>
+  <div class="testimonial">
+    <p>⭐⭐⭐⭐⭐ - "Proses cepat, aman, terpercaya!" - @gamertrust</p>
+  </div>
+  <div class="testimonial">
+    <p>⭐⭐⭐⭐⭐ - "Sudah 3x transaksi di sini, mantap banget!" - @safeseller</p>
+  </div>
+  <div class="testimonial">
+    <p>⭐⭐⭐⭐⭐ - "Admin ramah dan fast response, recommended seller!" - @akunlegend</p>
+  </div>
+</div>
+
+<div class="characters">
+  <img src="https://static.wikia.nocookie.net/freefire/images/3/37/DJ_Alok.jpg" alt="Alok Free Fire">
+  <img src="https://static.wikia.nocookie.net/mobile-legends/images/d/da/Angela_wallpaper.jpg" alt="Angela Mobile Legends">
+</div>
+
+  </div>  <footer>
+    &copy; 2025 The King Off Bilzyy. All rights reserved.
+  </footer>
+</body>
+</html>
